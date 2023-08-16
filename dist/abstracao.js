@@ -1,12 +1,16 @@
 "use strict";
 class Forma {
-    constructor(name) {
-        this.name = name;
+    constructor(id) {
+        this.id = id;
+    }
+    //as classes filhas nao precisam implementar
+    getid() {
+        return this.id;
     }
 }
 class Triangulo extends Forma {
-    constructor(name, base, altura) {
-        super(name);
+    constructor(id, base, altura) {
+        super(id);
         this.base = base;
         this.altura = altura;
     }
@@ -27,11 +31,15 @@ class Calculadora {
     constructor() {
         this.formas = [];
     }
+    //Calcula um conjunto de formas (polimorfismo)
     calcularForma(formas) {
         formas.forEach(f => console.log(f.calculaArea()));
     }
 }
-let quadrado = new Quandrado("quadrado", 234);
-let triangulo = new Triangulo("triangulo", 12, 23);
+let quadrado = new Quandrado("quadrado-123", 234);
+let triangulo = new Triangulo("triangulo-123", 12, 23);
 let calc = new Calculadora();
-calc.calcularForma([quadrado, triangulo]);
+//formas => um conjunto de implementações distintas (polimorfismo)
+let formas = [quadrado, triangulo];
+//envio um conjunto de implementações distintas para calcular
+calc.calcularForma(formas);

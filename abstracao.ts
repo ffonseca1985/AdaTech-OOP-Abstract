@@ -7,6 +7,8 @@ interface Identity {
 // classes que heradam de uma classe abstrata só implementam o que estiver como abstract
 abstract class Forma implements Identity {
 
+    // esta classe foi obrigada a implementar porque
+    // a interface Identity tem o id
     id: string;
 
     constructor(id: string) {
@@ -33,6 +35,8 @@ class Triangulo extends Forma {
         this.altura = altura;
     }
 
+    // esta classe foi obrigada a implementar porque
+    // a classe abstrata tem o método: abstract calculaArea() : number
     calculaArea() {
         return this.base * this.altura;
     }

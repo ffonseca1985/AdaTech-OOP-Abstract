@@ -35,7 +35,7 @@ class Triangulo extends Forma {
         this.altura = altura;
     }
 
-    // esta classe foi obrigada a implementar porque
+    // esta classe foi obrigada a implementar calculaArea porque
     // a classe abstrata tem o método: abstract calculaArea() : number
     calculaArea() {
         return this.base * this.altura;

@@ -1,8 +1,10 @@
 
+// classes que implementam uma interface precisam implementar tudo
 interface Identity {
     id: string;
 }
 
+// classes que heradam de uma classe abstract só implementam o que estiver como abstract
 abstract class Forma implements Identity {
 
     id: string;

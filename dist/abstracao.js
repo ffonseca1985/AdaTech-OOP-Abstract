@@ -1,4 +1,5 @@
 "use strict";
+// classes que heradam de uma classe abstrata só implementam o que estiver como abstract
 class Forma {
     constructor(id) {
         this.id = id;
@@ -33,7 +34,7 @@ class Calculadora {
     }
     //Calcula um conjunto de formas (polimorfismo)
     calcularForma(formas) {
-        formas.forEach(f => console.log(f.calculaArea()));
+        formas.forEach(f => console.log(`A area do ${f.id} tem ${f.calculaArea()}`));
     }
 }
 let quadrado = new Quandrado("quadrado-123", 234);

@@ -58,7 +58,7 @@ class Calculadora {
 
     //Calcula um conjunto de formas (polimorfismo)
     calcularForma(formas: Array<Forma>) {
-        formas.forEach(f => console.log(f.calculaArea()));
+        formas.forEach(f => console.log(`A area do ${f.id} tem ${f.calculaArea()}` ));
     }
 }
 
